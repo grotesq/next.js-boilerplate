@@ -1,0 +1,27 @@
+# System
+.DS_Store
+
+#Packages
+
+/node_modules
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Log
+npm-debug.log
+yarn-error.log
+
+# IDE
+.idea
+.vscode
+
+# Build
+.next
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

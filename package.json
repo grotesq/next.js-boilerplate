@@ -1,0 +1,44 @@
+{
+  "name": "next-js-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "next-routes.js",
+  "scripts": {
+    "init:docker": "docker build -t next-js-builder .",
+    "dev": "cross-env NODE_ENV=development node server.js",
+    "dev:node": "cross-env NODE_ENV=development nodemon server.js --exec",
+    "build": "",
+    "build:next": "next build",
+    "build:docker": "docker container prune -f; docker container run -it --name \"next-js-builder\" -v $(pwd):/opt next-js-builder /opt/build.sh",
+    "build:docker:production": "docker container prune -f; docker container run -it --name \"next-js-builder\" -v $(pwd):/opt next-js-builder /opt/build.sh production",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@zeit/next-css": "^1.0.1",
+    "autoprefixer": "^9.7.4",
+    "axios": "^0.19.2",
+    "context-q": "^1.0.0",
+    "dayjs": "^1.8.22",
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^1.7.0",
+    "koa": "^2.11.0",
+    "koa-router": "^8.0.8",
+    "next": "^9.3.0",
+    "next-routes": "^1.4.2",
+    "postcss-import": "^12.0.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "styled-components": "^5.0.1",
+    "tailwindcss": "^1.2.0",
+    "universal-cookie": "^4.0.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
